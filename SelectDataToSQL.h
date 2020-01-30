@@ -12,11 +12,10 @@ class SelectDataToSQL {
 	PGconn   *dbconn;
 	PGresult *res;
 
-	SelectDataToSQL & operator =(SelectDataToSQL const &) = delete;
-	SelectDataToSQL( SelectDataToSQL const &) = delete;
-
 public:
 	SelectDataToSQL(std::string, std::string, std::string, std::string);
+	SelectDataToSQL( SelectDataToSQL const &) = delete;	
+	SelectDataToSQL & operator = (SelectDataToSQL const &) = delete;
 
 	std::map <int,std::vector<std::string>> & selectData(std::string);
 
